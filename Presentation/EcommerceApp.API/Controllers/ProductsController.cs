@@ -22,9 +22,9 @@ namespace EcommerceApp.API.Controllers
         {
             await _productWriteRepository.AddRangeAsync(new()
             {
-                new() { Id = Guid.NewGuid(), Name = "Product 1", Price = 100, Stock = 10, CreatedDate = DateTime.UtcNow },
-                new() { Id = Guid.NewGuid(), Name = "Product 2", Price = 200, Stock = 20, CreatedDate = DateTime.UtcNow },
-                new() { Id = Guid.NewGuid(), Name = "Product 3", Price = 300, Stock = 110, CreatedDate = DateTime.UtcNow },
+                new() { Name = "Product 1", Price = 1500, Stock = 10 },
+                new() { Name = "Product 2", Price = 200, Stock = 20 },
+                new() { Name = "Product 3", Price = 300, Stock = 110 },
             });
 
             await _productWriteRepository.SaveAsync();
