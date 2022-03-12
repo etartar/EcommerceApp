@@ -4,6 +4,11 @@ namespace EcommerceApp.Domain.Entities
 {
     public class Order : BaseEntity
     {
+        public Order()
+        {
+            Products = new HashSet<Product>();
+        }
+
         #region [Properties]
         public Guid CustomerId { get; set; }
         public string Description { get; set; }
